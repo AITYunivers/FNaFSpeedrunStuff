@@ -1,5 +1,5 @@
-state("FiveNights-SRTest") {
-  int area : "FiveNights-SRTest.exe", 0xB60E4, 0x1F0;
+state("FiveNightsatFreddys") {
+  int area : "FiveNightsatFreddys.exe", 0xB60E4, 0x1F0;
 }
 start {
   if(current.area == 10 || current.area == 2) {
