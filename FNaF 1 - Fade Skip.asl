@@ -1,5 +1,5 @@
 state("FiveNightsatFreddys") {
-  int area : "FiveNightsatFreddys.exe", 0xB60E4, 0x1F0;
+  int area : "FiveNightsatFreddys.exe", 0xAC9AC, 0x1F0;
 }
 start {
   if(current.area == 10 || current.area == 2) {
