@@ -2,12 +2,12 @@
 8:55.02 on Nights
 0:09.39 on 6AM
 
-Best Possible Time: 45:32.63
+Best Possible Time: 45:23.63
 
-45:32 is RTA possible but
+45:23 is RTA possible but
 only with perfect fade skips
 and decent fps.
 
-32.63 would need to go 45
+23.63 would need to go 45
 minutes at a perfectly
 consistant 60 FPS.
