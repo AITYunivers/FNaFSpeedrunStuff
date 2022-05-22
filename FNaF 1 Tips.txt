@@ -1,3 +1,10 @@
+To perform Fade Skip,
+do Alt F4 on every fade
+sequence.
+
+Here are the timings for
+every fade sequence.
+
 0:02.17 on Night Text
 8:55.02 on Nights
 0:09.39 on 6AM
