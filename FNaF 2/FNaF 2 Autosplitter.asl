@@ -7,7 +7,7 @@ start {
   }
 }
 split {
-  if(current.area == 2 || current.area == 3 || current.area == 5) {
+  if(old.area == -1 && current.area == 2 || old.area == 1 && current.area == 2 || old.area == -1 && current.area == 3 || old.area == -1 && current.area == 5|| old.area == 3 && current.area == 5) {
     return true;
   }
 }
