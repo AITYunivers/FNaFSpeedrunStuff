@@ -1,3 +1,3 @@
-# FNaF 1 Speedrun Stuff
+# FNaF Speedrun Stuff
 
-Helpful files for FNaF 1 Speedrunning
+Helpful files for FNaF Speedrunning
