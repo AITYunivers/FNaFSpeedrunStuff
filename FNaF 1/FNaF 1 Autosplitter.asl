@@ -12,7 +12,7 @@ split {
   }
 }
 reset {
-  if(current.area == 4) {
+  if(current.area == 4 || current.area == 0) {
     return true;
   }
 }
