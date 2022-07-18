@@ -6,7 +6,7 @@ state("FiveNightsAtFreddys")
 startup
 {
     settings.Add("fade", true, "Fade Skip Splits");
-    settings.Add("f2", true, "Reset on F2");
+    settings.Add("f2", true, "Reset Timer on F2");
     settings.Add("noloads", true, "Remove Loads");
     settings.Add("death", false, "Death%");
 }
@@ -20,15 +20,11 @@ start
 }
 split
 {
-    if (settings["death"] && old.area == -1 && current.area == 4 ||
-    settings["death"] && old.area == 3 && current.area == 4 ||
-    settings["death"] && old.area == -1 && current.area == 13 ||
-    settings["death"] && old.area == 3 && current.area == 13 ||
-    !settings["death"] && old.area == -1 && current.area == 6 ||
-    !settings["death"] && old.area == 3 && current.area == 6 ||
-    !settings["death"] && settings["fade"] && old.area == -1 && current.area == 3 ||
-    !settings["death"] && settings["fade"] && old.area == -1 && current.area == 2 ||
-    !settings["death"] && settings["fade"] && old.area == 6 && current.area == 2)
+    if (settings["death"] && old.area != 4 && current.area == 4 ||
+    settings["death"] && old.area != 13 && current.area == 13 ||
+    !settings["death"] && old.area != 6 && current.area == 6 ||
+    !settings["death"] && settings["fade"] && old.area != 3 && current.area == 3 ||
+    !settings["death"] && settings["fade"] && old.area != 2 && current.area == 2)
         return true;
 }
 reset
@@ -39,7 +35,8 @@ reset
 }
 isLoading
 {
-    if (settings["noloads"] && current.area == -1)
+    if (settings["noloads"] && current.area == -1 ||
+    settings["noloads"] && current.area == 7)
         return true;
     else
         return false;
