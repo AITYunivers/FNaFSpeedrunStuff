@@ -12,14 +12,13 @@ between nights.
 F2
 Enter
 Alt + F4
-Enter
+Spam Enter
 
-Here are the timings for
-every fade sequence.
+Here are the best timings
+for every split.
 
-As soon as you press enter on
-the Warning Screen
 0:02.17 on Night Text
 7:00.02 on Nights
+TBD on Resets
 
-Best Possible Time: UNKNOWN
+Best Possible Time: TBD
