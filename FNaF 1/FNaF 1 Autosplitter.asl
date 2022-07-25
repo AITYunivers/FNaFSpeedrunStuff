@@ -1,6 +1,7 @@
 state("FiveNightsAtFreddys")
 {
     int area : "FiveNightsAtFreddys.exe", 0xAC9AC, 0x1F0;
+    byte hour : "FiveNightsAtFreddys.exe", 0xAC9AC, 0x1D8, 0x8D0, 0x240, 0xC, 0x20a;
 }
 
 startup
@@ -22,7 +23,7 @@ split
 {
     if (settings["death"] && old.area != 4 && current.area == 4 ||
     settings["death"] && old.area != 13 && current.area == 13 ||
-    !settings["death"] && old.area != 6 && current.area == 6 ||
+    !settings["death"] && old.hour == 249 && current.hour == 0 ||
     !settings["death"] && settings["fade"] && old.area != 3 && current.area == 3 ||
     !settings["death"] && settings["fade"] && old.area != 2 && current.area == 2)
         return true;
