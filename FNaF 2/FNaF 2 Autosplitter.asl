@@ -123,8 +123,7 @@ init
         new MemoryWatcher<int>(new DeepPointer((IntPtr)vars.PAMU, 0x1F0))                           { Name = "gameFrame"    },
         new StringWatcher     (new DeepPointer((IntPtr)vars.PAMU + 4, 0x8D0, 0x18, 0x22E, 0x0), 64) { Name = "gameVersion"  },
         new MemoryWatcher<int>(new DeepPointer((IntPtr)vars.PAMU + 4, 0x8D0, 0xF0, 0x20A))          { Name = "gameDemo"     },
-        new MemoryWatcher<int>(new DeepPointer((IntPtr)vars.PAMU + 4, 0x8D0, 0x188, 0x20A))         { Name = "gameHour"     },
-        new MemoryWatcher<int>(new DeepPointer((IntPtr)vars.PAMU, 0xC4))                            { Name = "gameFrameCnt" }
+        new MemoryWatcher<int>(new DeepPointer((IntPtr)vars.PAMU + 4, 0x8D0, 0x188, 0x20A))         { Name = "gameHour"     }
     };
     
     vars.Watchers.UpdateAll(game);
