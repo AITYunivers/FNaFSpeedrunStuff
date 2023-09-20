@@ -55,6 +55,7 @@ startup
 init
 {
     var mainModule = modules.First();
+    while (game.MemoryPages(false).Count() < 30) {}
 
     string HeaderBytes = "";
     foreach (byte b in Encoding.ASCII.GetBytes("PAMU"))
