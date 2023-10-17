@@ -49,50 +49,38 @@ update
 
 start
 {
-    if (vars.Helper.IsLoading) return false;
-
-    if (vars.Death                     && // User is running Death%
-        current.FrameName == "Frame 1" || // Game Frame is currently 'Frame 1'
-        
-        !vars.Death                    && // User is not running Death%
-        (current.FrameName == "ad"     || // Game Frame is currently 'ad'
-        current.FrameName == "what day")) // Game Frame is currently 'what day'
-    {
-        return true;
-    }
+    if (!vars.Helper.IsLoading)
+        return (vars.Death                      && // User is running Death%
+                current.FrameName == "Frame 1"  || // Game Frame is currently 'Frame 1'
+                
+                !vars.Death                     && // User is not running Death%
+                (current.FrameName == "ad"      || // Game Frame is currently 'ad'
+                current.FrameName == "what day")); // Game Frame is currently 'what day'
 }
 
 split
 {
-    if (vars.Helper.IsLoading) return false;
+    if (!vars.Helper.IsLoading)
+        return ((vars.Death                      && // User is running Death%
+                current.FrameName == "died"      || // Game Frame is currently 'died'
+                current.FrameName == "freddy")   || // Game Frame is currently 'freddy'
 
-    if ((vars.Death                      && // User is running Death%
-        current.FrameName == "died"      || // Game Frame is currently 'died'
-        current.FrameName == "freddy")   || // Game Frame is currently 'freddy'
+                !vars.Death                      && // User is not running Death%
+                (current.FrameName == "next day" || // Game Frame is currently 'next day'
 
-        !vars.Death                      && // User is not running Death%
-        (current.FrameName == "next day" || // Game Frame is currently 'next day'
-
-        settings["fsSplits"]             && // Fade Skips Splits are enabled
-        current.FrameName == "Frame 1"   || // Game Frame is currently 'Frame 1'
-        current.FrameName == "what day"))   // Game Frame is currently 'what day'
-    {
-        return true;
-    }
+                settings["fsSplits"]             && // Fade Skips Splits are enabled
+                current.FrameName == "Frame 1"   || // Game Frame is currently 'Frame 1'
+                current.FrameName == "what day"));  // Game Frame is currently 'what day'
 }
 
 reset
 {
-    if (vars.Helper.IsLoading) return false;
+    if (!vars.Helper.IsLoading)
+        return (settings["resetF2"]             && // Reset on F2 is enabled
+                current.FrameName == "Frame 17" || // Game Frame is currently 'Frame 17'
 
-    if (settings["resetF2"]             && // Reset on F2 is enabled
-        current.FrameName == "Frame 17" || // Game Frame is currently 'Frame 17'
-
-        !vars.Death                     && // User is not running Death%
-        current.FrameName == "died")       // Game Frame is currently 'dued'
-    {
-        return true;
-    }
+                !vars.Death                     && // User is not running Death%
+                current.FrameName == "died");      // Game Frame is currently 'dued'
 }
 
 isLoading
