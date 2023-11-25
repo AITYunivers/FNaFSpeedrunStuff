@@ -16,7 +16,7 @@ startup
   settings.Add("Clock",    false, "Clock Ending");
   settings.Add("Universe", false, "Universe Ending");
   settings.Add("Rainbow",  false, "Rainbow Ending");
-  settings.Add("Mini",     false, "Slipt At New Character Screen After Minigames");
+  settings.Add("Mini",     false, "Split At New Character Screen After Minigames");
 
   if (timer.CurrentTimingMethod == TimingMethod.RealTime)
   {        
